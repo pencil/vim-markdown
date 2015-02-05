@@ -68,8 +68,8 @@ syn match  mkdLineContinue ".$" contained
 syn match  mkdLineBreak    /  \+$/
 syn region mkdBlockquote   start=/^\s*>/                   end=/$/ contains=mkdLineBreak,mkdLineContinue,@Spell
 syn region mkdCode         start=/\(\([^\\]\|^\)\\\)\@<!`/ end=/\(\([^\\]\|^\)\\\)\@<!`/
-syn region mkdCode         start=/\s*``[^`]*/              end=/[^`]*``\s*/
-syn region mkdCode         start=/^\s*```\s*[0-9A-Za-z_-]*\s*$/          end=/^\s*```\s*$/
+syn region mkdCode         start=/\s*``[^`]+/              end=/[^`]+``\s*/
+syn region mkdCode         start=/^\s*```[0-9A-Za-z_\-\s]*$/  end=/^\s*```\s*$/
 syn region mkdCode         start=/\s*\~\~[^\~]*/              end=/[^\~]*\~\~\s*/
 syn region mkdCode         start=/^\s*\~\~\~\s*[0-9A-Za-z_-]*\s*$/          end=/^\s*\~\~\~\s*$/
 syn region mkdCode         start="<pre[^>]*>"              end="</pre>"
